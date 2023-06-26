@@ -1,5 +1,6 @@
 /**
- * Returns a full budget object with income, gdp, capita, and additional methods to get income in dollars and euros.
+ * Returns a full budget object with income, gdp, capita, 
+ * and additional methods to get income in dollars and euros.
  * @param {number} income - The income value.
  * @param {number} gdp - The gdp value.
  * @param {number} capita - The capita value.
