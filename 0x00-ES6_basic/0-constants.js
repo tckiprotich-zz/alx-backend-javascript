@@ -26,5 +26,3 @@ export function taskNext() {
 
   return combination;
 }
-
-console.log(`${taskFirst()} ${taskNext()}`);
