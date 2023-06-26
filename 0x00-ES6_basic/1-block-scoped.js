@@ -11,13 +11,14 @@
  * @returns {Array<boolean>} An array containing two boolean values.
  */
 export default function taskBlock(trueOrFalse) {
-  const task = false;
-  const task2 = true;
+  let task = false;
+  let task2 = true;
 
   if (trueOrFalse) {
-    const task = true;
-    const task2 = false;
+    task = true;
+    task2 = false;
   }
 
+  console.log(`task is ${task} and task2 is ${task2}`);
   return [task, task2];
 }
