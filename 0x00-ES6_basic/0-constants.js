@@ -26,3 +26,5 @@ export function taskNext() {
 }
 
 console.log(`${taskFirst()} ${taskNext()}`);
+
+// Add a blank line at the end of the file
