@@ -19,6 +19,6 @@ export default function taskBlock(trueOrFalse) {
     task2 = false;
   }
 
-  console.log(`task is ${task} and task2 is ${task2}`);
+
   return [task, task2];
 }
