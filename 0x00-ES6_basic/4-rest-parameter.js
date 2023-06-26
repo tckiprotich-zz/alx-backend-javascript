@@ -4,5 +4,5 @@
  * @returns {number} The number of arguments passed to the function.
  */
 export default function returnHowManyArguments(...args) {
-    return args.length;}
-
+  return args.length;
+}
