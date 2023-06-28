@@ -1,0 +1,11 @@
+/**
+ * Returns a Promise that resolves or rejects based on the response
+ *  from an API.
+ * @returns {Promise} A Promise that resolves or rejects based on
+ *  the response from an API.
+ */
+function getResponseFromAPI() {
+  return new Promise((resolve, reject) => {
+
+  });
+}
