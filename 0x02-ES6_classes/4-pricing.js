@@ -2,33 +2,53 @@
  * Creates a new instance of the Currency class with a code of 'EUR' and a name of 'Euro'
  * @type {Currency}
  */
-export default class Currency {
-  constructor(code, name) {
-    this.code = code;
-    this.name = name;
+import Currency from './3-currency';
+
+export default class Pricing {
+  constructor(amount, currency) {
+    this.amount = amount;
+    this.currency = currency;
   }
 
-  get code() {
-    return this._code;
+  get amount() {
+    return this._amount;
   }
 
-  set code(value) {
-    this._code = value;
-  }
-
-  get name() {
-    return this._name;
-  }
-
-  set name(value) {
-    this._name = value;
+  set amount(value) {
+    if (typeof value !== 'number') {
+      throw new TypeError('amount must be a number');
+    }
+    this._amount = value;
   }
 
   /**
-     * Creates the full string representation of this Currency.
-     * @returns {String}
-     */
-  displayFullCurrency() {
-    return `${this.name} (${this.code})`;
+   * @returns {Currency}
+   */
+  get currency() {
+    return this._currency;
+  }
+
+  /**
+   * @param {Currency} value
+   */
+  set currency(value) {
+    if (!(value instanceof Currency)) {
+      throw new TypeError('currency must be a Currency');
+    }
+    this._currency = value;
+  }
+
+  displayFullPrice() {
+    return `${this.amount} ${this.currency.name} (${this.currency.code})`;
+  }
+
+  static convertPrice(amount, conversionRate) {
+    if (typeof amount !== 'number') {
+      throw new TypeError('amount must be a number');
+    }
+    if (typeof conversionRate !== 'number') {
+      throw new TypeError('conversionRate must be a number');
+    }
+    return amount * conversionRate;
   }
 }
